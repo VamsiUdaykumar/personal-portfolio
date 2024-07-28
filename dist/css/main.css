@@ -695,6 +695,101 @@ header .seperator-skew svg .fill-white {
     min-height: 350px;
   }
 }
+.experience {
+  padding: 60px 0;
+  background-color: #ffffff; /* Changed to white */
+}
+.experience .container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.experience h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.experience h2 .text-blue {
+  color: #007bff;
+}
+.experience .timeline {
+  position: relative;
+  padding: 20px 0;
+}
+.experience .timeline::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #007bff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.experience .timeline .timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
+  width: 50%;
+}
+.experience .timeline .timeline-item:nth-child(odd) {
+  justify-content: flex-end;
+  padding-right: 100px;
+}
+.experience .timeline .timeline-item:nth-child(even) {
+  justify-content: flex-start;
+  padding-left: 100px;
+  padding-right: 0;
+  left: 50%;
+}
+.experience .timeline .timeline-item:nth-child(even) .timeline-content {
+  text-align: left;
+}
+.experience .timeline .timeline-item:nth-child(even) .timeline-image {
+  order: 2;
+  margin-left: 30px;
+  margin-right: 0;
+}
+.experience .timeline .timeline-item .timeline-image {
+  width: 80px;  /* Set explicit width */
+  height: 80px; /* Set explicit height */
+  overflow: hidden;
+  margin-right: 30px;
+}
+.experience .timeline .timeline-item .timeline-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure the logo is fully visible */
+}
+.experience .timeline .timeline-item .timeline-content {
+  flex: 1; /* Content occupies the remaining space */
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.experience .timeline .timeline-item .timeline-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 5px;
+}
+.experience .timeline .timeline-item .timeline-content h4 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+.experience .timeline .timeline-item .timeline-content .timeline-date {
+  font-size: 0.875rem;
+  color: #999;
+  margin-bottom: 15px;
+}
+.experience .timeline .timeline-item .timeline-content p {
+  font-size: 0.875rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
 .education {
   background: white;
   padding-bottom: 3rem;
@@ -718,6 +813,7 @@ header .seperator-skew svg .fill-white {
 .education .container .education-card > *:last-child {
   margin-top: 40px;
 }
+
 @media (max-width: 500px) {
   .education .container .education-card {
     padding: 20px;
