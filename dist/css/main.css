@@ -700,7 +700,7 @@ header .seperator-skew svg .fill-white {
   background-color: #ffffff; /* Changed to white */
 }
 .experience .container {
-  max-width: 1500px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -735,32 +735,15 @@ header .seperator-skew svg .fill-white {
 }
 .experience .timeline .timeline-item:nth-child(odd) {
   justify-content: flex-end;
-  padding-right: 100px;
+  padding-right: 100px; /* Adjusted padding */
 }
 .experience .timeline .timeline-item:nth-child(even) {
   justify-content: flex-start;
-  padding-left: 100px;
-  padding-right: 0;
+  padding-left: 100px; /* Adjusted padding */
   left: 50%;
 }
 .experience .timeline .timeline-item:nth-child(even) .timeline-content {
   text-align: left;
-}
-.experience .timeline .timeline-item:nth-child(even) .timeline-image {
-  order: 2;
-  margin-left: 30px;
-  margin-right: 0;
-}
-.experience .timeline .timeline-item .timeline-image {
-  width: 80px;  /* Set explicit width */
-  height: 80px; /* Set explicit height */
-  overflow: hidden;
-  margin-right: 30px;
-}
-.experience .timeline .timeline-item .timeline-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* Ensure the logo is fully visible */
 }
 .experience .timeline .timeline-item .timeline-content {
   flex: 1; /* Content occupies the remaining space */
@@ -768,27 +751,72 @@ header .seperator-skew svg .fill-white {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 0;
 }
 .experience .timeline .timeline-item .timeline-content h3 {
   font-size: 1.25rem;
   margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -40px;
+}
+.experience .timeline .timeline-item .timeline-content h3 .timeline-image {
+  width: 75px; /* Adjusted size */
+  height: 75px; /* Adjusted size */
+  overflow: hidden;
+  margin-left: 10px;
+  margin-top: 32.5px;
+}
+.experience .timeline .timeline-item .timeline-content h3 .timeline-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure the logo is fully visible */
 }
 .experience .timeline .timeline-item .timeline-content h4 {
   font-size: 1rem;
   color: #666;
   margin-bottom: 10px;
+  margin-top: -40px;
 }
 .experience .timeline .timeline-item .timeline-content .timeline-date {
   font-size: 0.875rem;
   color: #999;
   margin-bottom: 15px;
+  margin-top: -10px;
 }
 .experience .timeline .timeline-item .timeline-content p {
   font-size: 0.875rem;
   color: #333;
   line-height: 1.6;
-  margin-bottom: 10px;
+  margin-bottom: -5px;
 }
+
+.education {
+  background: white;
+  padding-bottom: 3rem;
+}
+.education .container {
+  max-width: 900px;
+}
+.education .container h2 {
+  text-align: center;
+  color: black;
+  margin-bottom: 3rem;
+}
+.education .container .education-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0.15rem 0.6rem rgba(43, 52, 56, 0.15);
+  padding: 40px;
+  border-radius: 3px;
+}
+.education .container .education-card > *:last-child {
+  margin-top: 40px;
+}
+
 
 .education {
   background: white;
@@ -874,7 +902,7 @@ header .seperator-skew svg .fill-white {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
   z-index: 10;
