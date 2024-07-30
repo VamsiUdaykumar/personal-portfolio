@@ -609,6 +609,8 @@ header .seperator-skew svg .fill-white {
     height: 70vh;
   }
 }
+
+
 .projects {
   background: white;
   padding: 3rem 0;
@@ -616,85 +618,53 @@ header .seperator-skew svg .fill-white {
 .projects h2,
 .projects h2 span {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-weight: bold;
+  grid-column: span 2;
+}
+.projects .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 .projects .project-row {
+  background: #f9f9f9;
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
   display: flex;
-  margin-bottom: 3rem;
+  flex-direction: column;
 }
-.projects .project-row .project-left {
-  width: 50%;
-  margin-right: 2rem;
-}
-.projects .project-row .project-left img {
-  width: 100%;
-  border: 1px solid lightgray;
-}
-.projects .project-row .project-right {
-  width: 50%;
+.projects .project-right {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.projects .project-row .project-right h3 {
+.projects .project-right h3 {
   font-size: 1.25rem;
 }
-.projects .project-row .project-right .tech-stack-list {
+.projects .tech-stack-list {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
   margin-top: 1rem;
 }
-.projects .project-row .project-right .tech-stack-list p {
+.projects .tech-stack-list p {
   margin-right: 1rem;
 }
-.projects .project-row .project-right .tech-stack-list li {
+.projects .tech-stack-list li {
   margin-right: 20px;
   font-size: 1.5rem;
 }
-.projects .project-row .project-right .project-links {
+.projects .project-links {
   margin-top: 1rem;
 }
-.projects .project-row #webscraper {
-  background-image: url("../img/top10songs.JPG");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  -webkit-transition: background-image 0.2s ease-in-out;
-  transition: background-image 0.2s ease-in-out;
-}
-.projects .project-row #webscraper:hover {
-  background-image: url("../img/top10songs.gif");
+@media screen and (max-width: 860px) {
+  .projects .container {
+    grid-template-columns: 1fr;
+  }
 }
 
-@media screen and (max-width: 860px) {
-  .projects .project-row {
-    display: flex;
-    margin-bottom: 3rem;
-    flex-direction: column;
-  }
-  .projects .project-row .project-left {
-    width: 100%;
-  }
-  .projects .project-row .project-right {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 500px) {
-  .project-left {
-    min-height: 200px;
-  }
-}
-@media screen and (min-width: 501px) and (max-width: 700px) {
-  .project-left {
-    min-height: 300px;
-  }
-}
-@media screen and (min-width: 701px) and (max-width: 859px) {
-  .project-left {
-    min-height: 350px;
-  }
-}
 .experience {
   padding: 60px 0;
   background-color: #ffffff; /* Changed to white */
